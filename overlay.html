@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Mark Up / Layout / UI/UX</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	
+
+		
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>      
+	<![endif]-->
+		
+	<link rel="stylesheet" media="all" href="css/styles.css" />
+	
+	<!--[if IE 9]>
+		<link rel="stylesheet" media="all" href="css/ie9.css" />      
+	<![endif]-->
+		
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" media="all" href="css/ie.css" />      
+	<![endif]-->
+		
+	<!--[if lte IE 7]>
+		<link rel="stylesheet" media="all" href="css/ie7.css" />      
+	<![endif]-->
+		
+	<!--[if lte IE 6]>
+		<link rel="stylesheet" media="all" href="css/ie6.css" />      
+	<![endif]-->
+		
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body onload="initialize()">
+
+	<div id="wrapper">
+		<div id="main">
+		
+			<header class="clearfix">
+				<article id="card">
+					<h1 id="logo"><div class="main_info"><a href="index.html" style="text-decoration: none;"><span class="title">Mark Up / </span><span>Layout / </span><span class="title">UI/UX</span></a></div></h1>
+				</article>
+			</header>
+			
+			<div id="container" class="column equal_height_columns">
+			
+				<nav id="mainmenu" class="full">
+					<ul class="clearfix">
+						<li class="m_location">Overlay.</li>
+					</ul>
+				</nav>
+				
+				<section class="content clearfix">
+					<div class="about about_us">
+						<h2>Первый вариант.</h2>
+						<div class="wrapper_column clearfix">
+							<div class="sidebar_left"><div class="inner">Левая колонка</div></div>
+							<div class="sidebar_right"><div class="inner">Правая колонка</div></div>
+							<div class="center_column"><div class="inner">Центральная колонка</div></div>
+						</div>
+						<p>Недостатки: позиция bottom, нижний бордер у таких колонок уходит в небытие. Если нужно закрепить элемент у нижней части колонок, то лучше у .wrapper_column сделать position: relative; и внутренние элементы внутри колонок абсолютно позиционировать относительно .wrapper_column.</p>						
+						
+						<h2>Второй вариант (без поддержки ИЕ 6-7).</h2>
+						<div style="display: table; width: 100%;">
+						<div style="display: table-row;">
+							<div style="display: table-cell; height: 100px; background-color: #1472A3;"><div class="inner">Левая колонка</div></div>
+							<div style="display: table-cell; height: auto; 	background-color: #999999;"><div class="inner">Центральная колонка</div></div>
+							<div style="display: table-cell; height: auto; 	background-color: #60AE01;"><div class="inner">Правая колонка</div></div>
+						</div>
+						</div>
+						
+						<h2>Третий вариант.</h2>
+						<div class="col-wrap1 clearfix">
+							<div class="col-wrap2 clearfix">
+								<div class="col1"><div class="inner">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris adipiscing nibh non purus suscipit venenatis. Maecenas egestas, neque a iaculis tristique, purus eros laoreet ligula, id venenatis erat purus vitae justo. Sed ac pellentesque magna. Cras faucibus metus vel velit gravida blandit. Etiam aliquet ligula non enim sagittis vehicula. Donec fringilla, erat et semper eleifend, justo quam sodales tellus, a vehicula ipsum libero eget mi. Integer condimentum, nibh aliquet adipiscing scelerisque, nisl magna accumsan arcu, nec vehicula magna mauris interdum elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat dapibus lorem.
+								</div></div>
+								
+								<div class="col2"><div class="inner">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris adipiscing nibh non purus suscipit venenatis. Maecenas egestas, neque a iaculis tristique, purus eros laoreet ligula, id venenatis erat purus vitae justo. Sed ac pellentesque magna. Cras faucibus metus vel velit gravida blandit. Etiam aliquet ligula non enim sagittis vehicula. Donec fringilla, erat et semper eleifend, justo quam sodales tellus, a vehicula ipsum libero eget mi. Integer condimentum, nibh aliquet adipiscing scelerisque, nisl magna accumsan arcu, nec vehicula magna mauris interdum elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat dapibus lorem.
+								</div></div>
+							</div>
+						</div>
+						
+						<p>Недостатки: подходит для кратных по ширине колонок, но есть возможность сохранить нижний бордер и прижать элементы книзу. Три колонки таким способом, наверное, тоже можно сделать. Source: <a href="http://chikuyonok.ru/2009/06/float-columns/" target="_blank">Две колонки одинаковой высоты С. Чикуенка.</a></p>
+					</div>
+				</section>
+				
+			</div><!-- /#container -->
+			<span class="before">&nbsp;</span><span class="after">&nbsp;</span>
+			
+		</div><!-- /#main -->
+	</div><!-- /#wrapper -->
+	
+<!-- Overlay -->
+<div id="overlay">
+	<div class="bg"></div>
+	<div class="content"><div class="inner"><div class="inner_two">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris adipiscing nibh non purus suscipit venenatis. Maecenas egestas, neque a iaculis tristique, purus eros laoreet ligula, id venenatis erat purus vitae justo. Sed ac pellentesque magna. Cras faucibus metus vel velit gravida blandit. Etiam aliquet ligula non enim sagittis vehicula. Donec fringilla, erat et semper eleifend, justo quam sodales tellus, a vehicula ipsum libero eget mi. Integer condimentum, nibh aliquet adipiscing scelerisque, nisl magna accumsan arcu, nec vehicula magna mauris interdum elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat dapibus lorem.
+	</div></div></div>
+</div>
+
+	
+</body>
+</html>

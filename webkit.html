@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Mark Up / Layout / UI/UX</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	
+
+		
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>      
+	<![endif]-->
+		
+	<link rel="stylesheet" media="all" href="css/styles.css" />
+	
+	<!--[if IE 9]>
+		<link rel="stylesheet" media="all" href="css/ie9.css" />      
+	<![endif]-->
+		
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" media="all" href="css/ie.css" />      
+	<![endif]-->
+		
+	<!--[if lte IE 7]>
+		<link rel="stylesheet" media="all" href="css/ie7.css" />      
+	<![endif]-->
+		
+	<!--[if lte IE 6]>
+		<link rel="stylesheet" media="all" href="css/ie6.css" />      
+	<![endif]-->
+		
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+
+</head>
+<body onload="initialize()">
+
+	<div id="wrapper">
+		<div id="main">
+		
+			<header class="clearfix">
+				<article id="card">
+					<h1 id="logo"><div class="main_info"><a href="index.html" style="text-decoration: none;"><span class="title">Mark Up / </span><span>Layout / </span><span class="title">UI/UX</span></a></div></h1>
+				</article>
+			</header>
+			
+			<div id="container" class="column equal_height_columns">
+			
+				<nav id="mainmenu" class="full">
+					<ul class="clearfix">
+						<li class="m_location">Select и некоторые тонкости скругления углов в Webkit.</li>
+					</ul>
+				</nav>
+				
+				<section class="content clearfix">
+					<div class="about about_us">
+					<h2>Select.</h2>
+					<p><span>
+								<select id="how_help">
+									<option selected="selected">How we can help you?</option>
+									<option>We can call you</option>
+									<option>We can write you</option>
+									<option>Professional consultation</option>
+								</select>
+					</span></p>
+					<p>Везде селекты отобразились по-разному. Если в ие9 проблема лишь с шириной, то в Сафари совсем плохо.</p>
+					<p><span class="sel">
+								<select id="how_help_you">
+									<option selected="selected">How we can help you?</option>
+									<option>We can call you</option>
+									<option>We can write you</option>
+									<option>Professional consultation</option>
+								</select>
+					</span></p>
+					<p>Перенос стилей в span не сильно улучшил ситуацию. Да и focus элементу сложно в таком случае придать.</p>
+					<p>Выход: использование нестандартных селектов (Kendo UI, jQuery UI) или, если необходимо лишь немного изменить внешний вид (как в примере) - вендорное свойство 	-webkit-appearance: textfield;. Но UI - более универсально и кроссбраузерно, хотя иногда долго.</p>
+					<p><span>
+								<select id="how_help_fix">
+									<option selected="selected">How we can help you?</option>
+									<option>We can call you</option>
+									<option>We can write you</option>
+									<option>Professional consultation</option>
+								</select>
+					</span></p>
+					
+					<h2>Скругление углов у object / iframe</h2>
+					<p>Вебкиты не скругляют углы у object и iframe (даже если скругляете у родителя). Раньше Сафари и Google Maps не скругляла, но сейчас вроде пофиксили. Но с iframe остается проблема. Однако есть свойство <a href="https://www.webkit.org/blog/181/css-masks/" target="_blank">-webkit-mask-box-image</a>, которое соответственно позволяет наложить картинку-маску. -webkit-mask-box-image: url(../images/mask_big.png);</p>
+					<div class="location_video"><iframe width="800" height="444" frameborder="0" type="text/html" class="youtube-player" id="media_youtube_XZhYch32qP4_1_iframe" src="http://www.youtube.com/embed/XZhYch32qP4?version=3&amp;modestbranding=1&amp;hd=1&amp;rel=0&amp;theme=light&amp;wmode=opaque" ></iframe></div>
+					</div>
+				</section>
+				
+			</div><!-- /#container -->
+			<span class="before">&nbsp;</span><span class="after">&nbsp;</span>
+			
+		</div><!-- /#main -->
+	</div><!-- /#wrapper -->
+<script type="text/javascript">
+		if (jQuery.browser.webkit) {
+			jQuery('select').addClass('webkit');
+		}
+</script>	
+</body>
+</html>

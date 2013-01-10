@@ -1,0 +1,10 @@
+/*IE7 only stylesheet*/
+
+input[type="submit"], input[type="button"] {
+	overflow: visible;
+	zoom: 1;
+}
+
+.btn_true {
+	line-height: 13px;
+}

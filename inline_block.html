@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Mark Up / Layout / UI/UX</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	
+
+		
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>      
+	<![endif]-->
+		
+	<link rel="stylesheet" media="all" href="css/styles.css" />
+	
+	<!--[if IE 9]>
+		<link rel="stylesheet" media="all" href="css/ie9.css" />      
+	<![endif]-->
+		
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" media="all" href="css/ie.css" />      
+	<![endif]-->
+		
+	<!--[if lte IE 7]>
+		<link rel="stylesheet" media="all" href="css/ie7.css" />      
+	<![endif]-->
+		
+	<!--[if lte IE 6]>
+		<link rel="stylesheet" media="all" href="css/ie6.css" />      
+	<![endif]-->
+		
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body onload="initialize()">
+
+	<div id="wrapper">
+		<div id="main">
+		
+			<header class="clearfix">
+				<article id="card">
+					<h1 id="logo"><div class="main_info"><a href="index.html" style="text-decoration: none;"><span class="title">Mark Up / </span><span>Layout / </span><span class="title">UI/UX</span></a></div></h1>
+				</article>
+			</header>
+			
+			<div id="container" class="column equal_height_columns">
+			
+				<nav id="mainmenu" class="full">
+					<ul class="clearfix">
+						<li class="m_location">Отступы у inline-block.</li>
+					</ul>
+				</nav>
+				
+				<section class="content clearfix">
+					<div class="about about_us">
+						<p>Элементы с display: inline-block; - строчные относительно соседних элементов и родителя, поэтому пробелы или переносы, которые используются для форматирования кода в хтмл, рассматриваются как обычные расстояния между словами (весь элемент с inline-block как одно слово).</p>
+						<p>Ряд способов, позволяющих избавиться от этих пробелов, отлично описан в <a href="http://habrahabr.ru/post/137582/" target="_blank">статье</a>. У КАЖДОГО способа есть + и -. необходимо смотреть по ситуации.</p>
+						<p>По возможности, я всегда предпочитаю физически удалить пробелы между тегами или использовать комментарии, чтобы визуально перенести тег на следующую строку для удобства чтения кода. Также использую способ с левым отрицательным margin (обнуляя его у первого элемента) и споcоб с отрицательным word-spacing.</p>
+					</div>
+				</section>
+				
+			</div><!-- /#container -->
+			<span class="before">&nbsp;</span><span class="after">&nbsp;</span>
+			
+		</div><!-- /#main -->
+	</div><!-- /#wrapper -->
+	
+</body>
+</html>

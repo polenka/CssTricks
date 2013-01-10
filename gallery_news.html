@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Mark Up / Layout / UI/UX</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	
+
+		
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>      
+	<![endif]-->
+		
+	<link rel="stylesheet" media="all" href="css/styles.css" />
+	
+	<!--[if IE 9]>
+		<link rel="stylesheet" media="all" href="css/ie9.css" />      
+	<![endif]-->
+		
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" media="all" href="css/ie.css" />      
+	<![endif]-->
+		
+	<!--[if lte IE 7]>
+		<link rel="stylesheet" media="all" href="css/ie7.css" />      
+	<![endif]-->
+		
+	<!--[if lte IE 6]>
+		<link rel="stylesheet" media="all" href="css/ie6.css" />      
+	<![endif]-->
+		
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body onload="initialize()">
+
+	<div id="wrapper">
+		<div id="main">
+		
+			<header class="clearfix">
+				<article id="card">
+					<h1 id="logo"><div class="main_info"><a href="index.html" style="text-decoration: none;"><span class="title">Mark Up / </span><span>Layout / </span><span class="title">UI/UX</span></a></div></h1>
+				</article>
+			</header>
+			
+			<div id="container" class="column equal_height_columns">
+			
+				<nav id="mainmenu" class="full">
+					<ul class="clearfix">
+						<li class="m_location">Галерея и новости.</li>
+					</ul>
+				</nav>
+				
+				<section class="content clearfix">
+					<div class="about about_us">
+						<h2>Галерея товаров.</h2>
+						<p>Для того, чтобы расставить блоки с товарами в горизонтальную линию, можно использовать float: left;. Но в случае, если высота у блоков будет разной, те блок, которые перейдут на вторую и последующие строки, могут зацепиться за высокие блоки предыдущей строки. Использование display: inline-block и vertical-align: top решают эту проблему.</p>
+						<div id="gallery">
+							<div class="one">
+								<img src="images/logo_small.png" alt="Товар" />
+								<h3>Название товара</h3>
+								<p>Описание товара.</p>
+							</div>
+							
+							<div class="one">
+								<img src="images/logo_small.png" alt="Товар" />
+								<h3>Название товара</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris adipiscing nibh non purus suscipit venenatis. Maecenas egestas, neque a iaculis tristique, purus eros laoreet ligula, id venenatis erat purus vitae justo. Sed ac pellentesque magna. Cras faucibus metus vel velit gravida blandit. Etiam aliquet ligula non enim sagittis vehicula. Donec fringilla, erat et semper eleifend, justo quam sodales tellus, a vehicula ipsum libero eget mi. Integer condimentum, nibh aliquet adipiscing scelerisque, nisl magna accumsan arcu, nec vehicula magna mauris interdum elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat dapibus lorem.</p>
+							</div>
+							
+							<div class="one">
+								<img src="images/logo_small.png" alt="Товар" />
+								<h3>Название товара</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris adipiscing nibh non purus suscipit venenatis. Maecenas egestas, neque a iaculis tristique, purus eros laoreet ligula, id venenatis erat purus vitae justo. Sed ac pellentesque magna. Cras faucibus metus vel velit gravida blandit. Etiam aliquet ligula non enim sagittis vehicula.</p>
+							</div>
+							
+							<div class="one">
+								<img src="images/logo_small.png" alt="Товар" />
+								<h3>Название товара</h3>
+								<p>Описание товара.</p>
+							</div>
+							
+							<div class="one">
+								<img src="images/logo_small.png" alt="Товар" />
+								<h3>Название товара</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris adipiscing nibh non purus suscipit venenatis. Maecenas egestas, neque a iaculis tristique, purus eros laoreet ligula, id venenatis erat purus vitae justo. Sed ac pellentesque magna. Cras faucibus metus vel velit gravida blandit. Etiam aliquet ligula non enim sagittis vehicula. Donec fringilla, erat et semper eleifend, justo quam sodales tellus, a vehicula ipsum libero eget mi. Integer condimentum, nibh aliquet adipiscing scelerisque, nisl magna accumsan arcu, nec vehicula magna mauris interdum elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat dapibus lorem.</p>
+							</div>
+							
+							<div class="one">
+								<img src="images/logo_small.png" alt="Товар" />
+								<h3>Название товара</h3>
+								<p>Описание товара.</p>
+							</div>
+							
+							<div class="one">
+								<img src="images/logo_small.png" alt="Товар" />
+								<h3>Название товара</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris adipiscing nibh non purus suscipit venenatis. Maecenas egestas, neque a iaculis tristique, purus eros laoreet ligula, id venenatis erat purus vitae justo. Sed ac pellentesque magna.</p>
+							</div>
+						</div>
+						
+						<h2>Новости.</h2>
+						<p>Формат новости: заголовок, текст и картинка рядом с текстом (float: left/right). Существует 2 основных способа, позволяющие запретить тексту обтекать изображение: сделать overflow: hidden; тегу, в который обернут текст. Но не всегда есть возможность использовать это свойство. В таком случае, можно использовать у текста и заголовка (либо у оберточного родителя) margin, равный ширине изображения (и отступа). Чтобы второй вариант получился более гибким, стоит использовать "сестринский" селектор +. Тогда стиль применится в том случае, если тег img существует. .last img + .news_wrapper</p>
+						<div id="news">
+							<div class="one clearfix">
+								<img src="images/logo_small.png" alt="Товар" />
+								<div class="news_wrapper">
+									<h3>Название новости</h3>
+									<p>Описание новости.</p>
+								</div>
+							</div>
+							
+							<div class="one clearfix">
+								<img src="images/logo_small.png" alt="Товар" />
+								<div class="news_wrapper">
+									<h3>Название новости</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris adipiscing nibh non purus suscipit venenatis. Maecenas egestas, neque a iaculis tristique, purus eros laoreet ligula, id venenatis erat purus vitae justo. Sed ac pellentesque magna. Cras faucibus metus vel velit gravida blandit. Etiam aliquet ligula non enim sagittis vehicula. Donec fringilla, erat et semper eleifend, justo quam sodales tellus, a vehicula ipsum libero eget mi. Integer condimentum, nibh aliquet adipiscing scelerisque, nisl magna accumsan arcu, nec vehicula magna mauris interdum elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent volutpat dapibus lorem.</p>
+								</div>
+							</div>
+							
+							<div class="one clearfix">
+								<img src="images/logo_small.png" alt="Товар" />
+								<div class="news_wrapper">
+									<h3>Название новости</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris adipiscing nibh non purus suscipit venenatis. Maecenas egestas, neque a iaculis tristique, purus eros laoreet ligula, id venenatis erat purus vitae justo. Sed ac pellentesque magna. Cras faucibus metus vel velit gravida blandit. Etiam aliquet ligula non enim sagittis vehicula.</p>
+								</div>
+							</div>
+							
+							<div class="one clearfix last">
+								<img src="images/logo_small.png" alt="Товар" />
+								<div class="news_wrapper">
+									<h3>Название новости</h3>
+									<p>Описание новости.</p>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</section>
+				
+			</div><!-- /#container -->
+			<span class="before">&nbsp;</span><span class="after">&nbsp;</span>
+			
+		</div><!-- /#main -->
+	</div><!-- /#wrapper -->
+<script type="text/javascript">
+		if (jQuery.browser.webkit) {
+			jQuery('select').addClass('webkit');
+		}
+</script>	
+</body>
+</html>

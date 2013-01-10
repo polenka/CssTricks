@@ -1,0 +1,33 @@
+/*IE7 only stylesheet*/
+
+input[type="submit"], input[type="button"] {
+	overflow: visible;
+	zoom: 1;
+}
+
+nav#mainmenu {
+	padding: 1.95% 0 0;
+}
+
+nav#treatments_menu ul li {
+	zoom: 1;
+	display: inline;
+	width: 100%;
+}
+
+aside .appointment select {
+	height: auto;
+}
+
+aside .form-submit {
+	padding: 7px 17px;
+}
+
+aside .appointment form,
+aside .newsletter form {
+	zoom: 1;
+}
+
+section#additional_content div {
+	zoom: 1;
+}

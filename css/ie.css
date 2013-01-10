@@ -1,0 +1,37 @@
+/*IE7-8 only stylesheet*/
+
+.clearfix {
+	zoom: 1;
+}
+
+header,
+#container,
+a.green_btn,
+.form-text,
+.form-submit {
+	position: relative;
+	zoom: 1;
+	behavior: url(css/PIE.htc);
+}
+
+span.before {
+	bottom: -24px;
+	height: 24px;
+	left: 0px;
+	width: 281px;
+	background: url(../images/left_shadow-ie.png) no-repeat scroll 0 0 transparent;
+}
+
+span.after {
+	bottom: -24px;
+	height: 24px;
+	right: 0px;
+	width: 281px;
+	background: url(../images/right_shadow-ie.png) no-repeat scroll 100% 0 transparent;
+}
+
+.form-submit {
+	padding: 9px 17px 7px;
+}
+
+

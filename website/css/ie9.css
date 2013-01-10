@@ -1,0 +1,39 @@
+/*IE9 only stylesheet*/
+
+nav#mainmenu ul {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#9cd76f,endColorstr=#6fb23c);
+    zoom: 1;
+}
+
+nav#mainmenu > ul li a.active, nav#mainmenu > ul li a:hover,
+nav#mainmenu > ul li.last a.active, nav#mainmenu > ul li.last a:hover {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#3d90bb,endColorstr=#0b6795);
+    zoom: 1;
+	background: none #0b6795;
+}
+
+aside .appointment .form-submit {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ec6741,endColorstr=#dc3925);
+	zoom: 1;
+}
+
+aside .appointment .form-submit:hover {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#dc3925,endColorstr=#ec6741);
+    zoom: 1;
+}
+
+aside span.span_sub {
+	border-radius: 4px;
+	overflow: hidden;
+	box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+aside .newsletter .form-submit {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#35b2e7,endColorstr=#1e75d5);
+	zoom: 1;
+}
+
+aside .newsletter .form-submit:hover {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#1e75d5,endColorstr=#35b2e7);
+    zoom: 1;
+}

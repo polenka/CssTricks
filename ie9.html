@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Mark Up / Layout / UI/UX</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	
+
+		
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>      
+	<![endif]-->
+		
+	<link rel="stylesheet" media="all" href="css/styles.css" />
+	
+	<!--[if IE 9]>
+		<link rel="stylesheet" media="all" href="css/ie9.css" />      
+	<![endif]-->
+		
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" media="all" href="css/ie.css" />      
+	<![endif]-->
+		
+	<!--[if lte IE 7]>
+		<link rel="stylesheet" media="all" href="css/ie7.css" />      
+	<![endif]-->
+		
+	<!--[if lte IE 6]>
+		<link rel="stylesheet" media="all" href="css/ie6.css" />      
+	<![endif]-->
+		
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body onload="initialize()">
+
+	<div id="wrapper">
+		<div id="main">
+		
+			<header class="clearfix">
+				<article id="card">
+					<h1 id="logo"><div class="main_info"><a href="index.html" style="text-decoration: none;"><span class="title">Mark Up / </span><span>Layout / </span><span class="title">UI/UX</span></a></div></h1>
+				</article>
+			</header>
+			
+			<div id="container">
+			
+				<nav id="mainmenu">
+					<ul class="clearfix">
+						<li class="m_location">В чем нуждается ИE9?</li>
+					</ul>
+				</nav>
+				
+				<section class="content clearfix">
+					<div class="about about_us">
+						<p>Internet Explorer 9 - нормальный браузер! Да, он "не понимает" много из css3, но базовые вещи работают.</p>
+						<p>Остаются 2 распространенные, но легко решаемые проблемы: </p>
+						<p>- Когда используете отрицательный text-indent, чтобы спрятать за границы экрана текст из элемента (и поместить фоновое изображение), используйте em, не %. например, text-indent: -9999em; </p>
+						<p>- ИЕ9 не может скруглить углы у элементов, у которые есть background: linear-gradient. Это можно решить, используя вместо градиента изображение, закодированное в base64. <a href="http://www.colorzilla.com/gradient-editor" target="_blank">http://www.colorzilla.com/gradient-editor</a> сгенерирует все необходимые варианты, в т.ч. для ие9. Подключается в отдельный файл для ие или через условный класс.</p>
+					</div>
+				</section>
+				
+			</div><!-- /#container -->
+			<span class="before">&nbsp;</span><span class="after">&nbsp;</span>
+			
+		</div><!-- /#main -->
+	</div><!-- /#wrapper -->
+	
+</body>
+</html>

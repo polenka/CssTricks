@@ -1,0 +1,64 @@
+/*IE7-8 only stylesheet*/
+
+.clearfix,
+aside .articles .content div,
+nav#treatments_menu ul li {
+	zoom: 1;
+}
+
+section#additional_content div > a {
+	position: relative;
+	zoom: 1;
+	behavior: url(css/PIE.htc);
+}
+
+#main {
+
+	box-shadow: 0px 0px 18px 0px #175676;
+}
+
+nav#mainmenu ul {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#9cd76f,endColorstr=#6fb23c);
+    zoom: 1;
+}
+
+nav#mainmenu > ul li a.active, nav#mainmenu > ul li a:hover,
+nav#mainmenu > ul li.last a.active, nav#mainmenu > ul li.last a:hover {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#3d90bb,endColorstr=#0b6795);
+    zoom: 1;
+	background: none #0b6795;
+}
+
+aside .articles a {
+	width: 80px;
+}
+
+aside .articles dd a {
+	width: auto;
+}
+
+aside .appointment .form-submit {
+	position: relative;
+	zoom: 1;
+	behavior: url(css/PIE.htc);
+	border-radius: 4px;
+	-pie-background: linear-gradient(#ec6741, #dc3925);
+}
+
+aside .appointment .form-submit:hover {
+	-pie-background: linear-gradient(#dc3925, #ec6741);
+}
+
+aside .newsletter .form-submit {
+	position: relative;
+	zoom: 1;
+	behavior: url(css/PIE.htc);
+	border-radius: 4px;
+	-pie-background: linear-gradient(#35b2e7, #1e75d5);
+}
+
+aside .newsletter .form-submit:hover {
+	-pie-background: linear-gradient(#1e75d5, #35b2e7);
+}
+
+

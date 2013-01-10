@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Mark Up / Layout / UI/UX</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	
+
+		
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>      
+	<![endif]-->
+		
+	<link rel="stylesheet" media="all" href="css/styles.css" />
+	
+	<!--[if IE 9]>
+		<link rel="stylesheet" media="all" href="css/ie9.css" />      
+	<![endif]-->
+		
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" media="all" href="css/ie.css" />      
+	<![endif]-->
+		
+	<!--[if lte IE 7]>
+		<link rel="stylesheet" media="all" href="css/ie7.css" />      
+	<![endif]-->
+		
+	<!--[if lte IE 6]>
+		<link rel="stylesheet" media="all" href="css/ie6.css" />      
+	<![endif]-->
+		
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body onload="initialize()">
+
+	<div id="wrapper">
+		<div id="main">
+		
+			<header class="clearfix">
+				<article id="card">
+					<h1 id="logo"><div class="main_info"><a href="index.html" style="text-decoration: none;"><span class="title">Mark Up / </span><span>Layout / </span><span class="title">UI/UX</span></a></div></h1>
+				</article>
+			</header>
+			
+			<div id="container">
+			
+				<nav id="mainmenu">
+					<ul class="clearfix">
+						<li class="m_location">Theory</li>
+					</ul>
+				</nav>
+				
+				<section class="content clearfix">
+					<div class="about about_us">
+						<p><strong>"Джентльменский набор" или ремесло верстальщика.</strong></p>
+						<p>1. HTML5 и основные теги (header, footer, article, aside, section, nav). Новые типы и возможности инпутов (email, url, placeholder). Не забываем про автоматическую валидацию специальных полей, она может портить дизайн.<br />
+						Source: Марк Пилгрим <a href="http://htmlbook.ru/html5/introduction" target="_blank">Погружение в HTML5</a>
+						</p>
+						<p>2. - Каков рецепт кроссбраузерной верстки? Верстайте сразу для всех поддерживаемых браузеров. Только для всех и сразу. Поддержка браузеров в той или иной степени. Либо использование принципа деградации для устаревших версий. Правила на основе Modernizr (поможет не только для ИЕ, но и с определением тач-скрина, включенности/отключенности js и т.п.)
+						- HTML5 для ИЕ:
+							<pre>&lt;!--[if lt IE 9]&gt;<br />&lt;script src="http://html5shim.googlecode.com/svn/trunk/html5.js"&gt;lt;/script&gt;<br />&lt;![endif]--&gt;</pre>
+							
+						- IE conditional classes:
+								<pre><span>&lt;!--[if lt IE 7 ]&gt; &lt;html class="ie6"&gt; &lt;![endif]--&gt;</span><br /><span>&lt;!--[if IE 7 ]&gt;&lt;html class="ie7"&gt; &lt;![endif]--&gt;</span><br /><span>&lt;!--[if IE 8 ]&gt;&lt;html class="ie8"&gt; &lt;![endif]--&gt;</span><br /><span>&lt;!--[if IE 9 ]&gt;&lt;html class="ie9"&gt; &lt;![endif]--&gt;</span><br /><span>&lt;!--[if (gt IE 9)|!(IE)]&gt;&lt;!--&gt;</span><span>&lt;<span>html</span><span>class</span><span>=</span><span>""</span>&gt;</span><span>&lt;!--&lt;![endif]--&gt;</span></pre>
+							ИЛИ привычные IE conditional stylesheets. Или хотя бы сообщение о неподдержке.<br /><br />
+							
+						- PIE - http://css3pie.com При необходимости.</p>
+						<p>3. Сброс стилей. Для html5 - <a href="http://necolas.github.com/normalize.css/"  target="_blank">Normalize CSS</a> от <a href="http://nicolasgallagher.com/about-normalize-css/">Nicolas Gallagher</a>.</p>
+						<p>4. Картинки-спрайты.</p>
+						<p>5. Иконочные шрифты по максимуму.</p>
+						<p>6. Микроформаты (микроданные). <a href="http://www.xiper.net/learn/html/up-and-running/fancy-words/what-is-microdata.html"  target="_blank">Использование микроданных</a>.</p>
+						<p>7. В целом семантика кода, т.е. верстка с правильным использованием HTML тегов, использованием их по назначению. Четкая структура заголовков.</p>
+						<p>8. Относительные величины. Как минимум для текста и высоты строки.<br />	font: 100%/1.2 'Trebuchet MS', Arial, Helvetica, "Nimbus Sans L", sans-serif;<br />	font: 0.8em/1.2 'Trebuchet MS', Arial, Helvetica, "Nimbus Sans L", sans-serif;.</p>
+						<p>9. Сокращенные способы записи стилей для font, background, box-shodow, transition(сокращенный способ задать свойства перехода transition-property, transition-duration, transition-timing-function и transition-delay, например, transition: background-color 0.15s ease-in-out;)</p>
+						<p>10. Браузерные (вендорные) префиксы: -moz, -webkit, -ms, -o. Свойство БЕЗ префикса - всегда ПОСЛЕДНЕЕ. О валидности css пока речь не идет.</p>
+						<p>11. Минимум пустых элементов. Пустые, желательно inline теги,  используют для иконочных шрифтов, спрайтов (желательно какой-то текст все же использовать), для элементов дизайна, которые ну никак не разместить для имеющихмя тегов. :) Скажем НЕТ! очищению потока с помощью пустых дивов.</p>
+						<p>12. Использование clearfix.
+<pre>.clearfix:after {
+	content: " ";
+	display: block;
+	height: 0;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+}
+.clearfix {zoom: 1;}</pre>
+<pre>.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+.clearfix {zoom: 1;}</pre></p>
+						<p>13. Использование псевдоэлементов :before и :after (с ИЕ 8, но для младших версий есть приемы эмуляции, если необходимо).</p>
+						<p>14. "Внутренние" инструменты: Pixel Perfect, либо скриншот и сранение в Фотошопе, либо картинка с дизайном уложенная в див с полупрозрачностью,/ обведение элементов рамочками, в т.ч. родительских и соседних. Проверка во всех браузерах сразу,/ "внимательно смотреть" на то, что верстаешь,/ инструмент разработчика,/ пиксель - это расстояние!, подсчет расстояния, понимание того, почему именно это расстояние подошло, не механический подбор его в файербаге,/ чтобы решить проблему сползшего элемента, нужно понять почему он туда сполз</p>
+						<p>15. "Внешние инструменты": css3 генераторы (http://css3please.com, http://www.colorzilla.com/gradient-editor), http://resizemybrowser.com,  http://responsinator.com, http://fontello.com, сервисы кроссбраузерного тестирования, MobiOne, http://www.fontsquirrel.com/fontface/generator, более слабые альтернатива - http://www.font2web.com (more: http://habrahabr.ru/post/149863/)</p>
+						<p>16. Валидация. HTML не должен содержать ошибок/предупреждений. В качестве исключений можно оставить обоснованные ошибки (например, target=_blank);<br /><br />
+						в CSS обращаем внимание только на синтаксические ошибки. Вопрос с невалидными свойствами для ИЕ открыт. Если используете условные классы, то не смысла перетаскивать в другой файл.</p>
+						<p>17. В некоторых случаях убодно выносить отдельные стили в отдельные классы и затем собирать внешний вид элементы из этих классов, как конструктор. Чаще выносят декоративные стили, но иногда и позиционные.</p>
+						<p>18. !important - зло. Но иногда необходимое (для переопределения inline css). inline css без js - тоже зло!</p>
+						<p>19. Аккуратность - отстутствие "схлопнутых дивов" (если это не специально сделано), разных отступов у однотипных элементов.</p>
+						<p>20. О чем не всегда думают программисты: контент без тегов, теги для отличных элементов без классов (очень часто у сообщений об ошибках), изменение чего-либо js, используя только css (пример: открылся, закрылся элемент по нажатию на кнопку. Только показать и скрыть его в inline css чаще всего мало. Обычно и внешний вид кнопки надо менять и что-нибудь еще. Поэтому мне удобнее менять-добавлять классы hidden/visible у элемента и добавлять еще какие-нибудь классы у родителя, в идеале у родителя, общего для появляющегося элемента и, например, того, по действию на который, он появляется).</p>
+						<p>21. <a href="http://habrahabr.ru/post/114256/" target="_blank">Чек-лист верстки</a>.</p>
+					</div>
+				</section>
+				
+			</div><!-- /#container -->
+			<span class="before">&nbsp;</span><span class="after">&nbsp;</span>
+			
+		</div><!-- /#main -->
+	</div><!-- /#wrapper -->
+	
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Mark Up / Layout / UI/UX</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+	
+
+		
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>      
+	<![endif]-->
+		
+	<link rel="stylesheet" media="all" href="css/styles.css" />
+	
+	<!--[if IE 9]>
+		<link rel="stylesheet" media="all" href="css/ie9.css" />      
+	<![endif]-->
+		
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" media="all" href="css/ie.css" />      
+	<![endif]-->
+		
+	<!--[if lte IE 7]>
+		<link rel="stylesheet" media="all" href="css/ie7.css" />      
+	<![endif]-->
+		
+	<!--[if lte IE 6]>
+		<link rel="stylesheet" media="all" href="css/ie6.css" />      
+	<![endif]-->
+		
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+</head>
+<body onload="initialize()">
+
+	<div id="wrapper">
+		<div id="main">
+		
+			<header class="clearfix">
+				<article id="card">
+					<h1 id="logo"><div class="main_info"><a href="index.html" style="text-decoration: none;"><span class="title">Mark Up / </span><span>Layout / </span><span class="title">UI/UX</span></a></div></h1>
+				</article>
+			</header>
+			
+			<div id="container" class="column equal_height_columns">
+			
+				<nav id="mainmenu" class="full">
+					<ul class="clearfix">
+						<li class="m_location">Responsive design.</li>
+					</ul>
+				</nav>
+				
+				<section class="content clearfix">
+					<div class="about about_us">
+						<p><strong>Технологии:</strong></p>
+						<p>1. Media Queries - позволяют задать разное оформление страницы для разных типов устройств.</p>
+						<p>@media only screen and (max-width: 767px)<br />
+						@media only screen and (max-width: 1279px) and (min-width: 768px)<br />
+						@media only screen and (max-device-width: 1280px)<br />
+						@media only screen and (max-width: 940px)<br />
+						@media only screen and (min-width: 1441px)<br />
+						@media only screen and (max-device-width: 1280px)<br />
+						@media screen and (orientation: landscape)<br />
+						@media screen and (orientation: portrait)<br />
+						@media only screen and (max-device-width: 800px), only screen and (device-width: 1024px) and (device-height: 600px), only screen and (width: 1280px) and (orientation: landscape), only screen and (device-width: 800px), only screen and (max-width: 767px)<br /><br />
+						
+						fluid - all and (min-width: 740px) and (min-device-width: 740px), (max-device-width: 800px) and (min-width: 740px) and (orientation:landscape)<br />
+						normal - all and (min-width: 980px) and (min-device-width: 980px), all and (max-device-width: 1024px) and (min-width: 1024px) and (orientation:landscape)<br />
+						wide  - all and (min-width: 1220px)<br /><br />
+						stylesheets[all][] = css/icondenver.css<br />
+						stylesheets[all and (min-width: 480px)][] = css/480.css<br />
+						stylesheets[all and (min-width: 768px)][] = css/768.css<br />
+						stylesheets[all and (min-width: 960px)][] = css/960.css<br />
+						stylesheets[all and (min-width: 1024px)][] = css/1024.css<br />
+						stylesheets[all and (min-width: 1280px)][] = css/1280.css</p>
+						<p>2. Кастомные медиа запросы можно писать в одном файле, можно в разных (так удобнее для ИЕ). Мне нравится подключать файлы с медиа запросами так, чтобы каждая следующая ширина наследовала необходимое из предыдущей, и добавлять новые требуемые свойства для планшетов, средних мониторов, больших мониторов.</p>
+						<p>3. Принцип "mobile first" - начинаем верстку с мобильной версии. Почему? Чтобы дефолтный вариант, без медиа запросов, работал на старых мобильниках, которые не понимаю @media. В мобильных версиях все в основном располагается в одну колонку, а это естественное поведение потока, таким образом, наращивая дизайн, расставляя элементы на бОльших экранах, можно получить более стройный и чистый css.</p>
+						<p>4. Библиотеки, которые "учат" ИЕ ниже 9 версии и другие старые браузеры понимать медиа запросы - <a href="https://github.com/scottjehl/Respond" target="_blank">respond.js</a> или <a href="http://code.google.com/p/css3-mediaqueries-js" target="_blank">css3-mediaqueries.js</a></p>
+						<p>5. Правильный &lt;meta content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" name="viewport"&gt;.</p>
+						<p>6. Responsive css frameworks: http://responsive.gs, http://www.getskeleton.com, http://lessframework.com, http://gumbyframework.com, http://foundation.zurb.com/docs. Source: <a href="http://speckyboy.com/2011/11/17/15-responsive-css-frameworks-worth-considering/" target="_blank">CSS Frameworks</a>. Или Drupal themes Omega или Zen.</p>
+						<p>7. Elastic video - http://webdesignerwall.com/tutorials/css-elastic-videos.</p>
+						<p>8. Elastic images - img {max-width: 100%; height: auto;} (не работает, если изображение находится в блоке с display: inline-block;) Такая конструкция будет работать в IE 7 и IE 9, а для IE 8 делаем такой хак:<br />
+						@media \0screen {
+							img { 
+								width: auto; /* for ie 8 */
+							}
+						}</p>
+						<p>9. Использование max-width и min-width и относительных величин для шрифта, отступов, размеров блоков.</p>
+						<p>10. word-wrap: break-word;</p>
+						<p>11. Elastic tables - http://css-tricks.com/responsive-data-table-roundup</p>
+						<p>12. Меню для мобильной версии - http://habrahabr.ru/post/140801</p>
+						<p>13. Относительные единицы при создании макета. Если, например, в дизайне макет отрисован только на 960px, то для полноэкранного responsive макета это 100%. И все последующие рассчеты ведутся от 960px. Левая колонка - 200px = 20.8333% и т.д.</p>
+						<p>14. Полезные инструменты - http://habrahabr.ru/post/142120</p>
+					</div>
+				</section>
+				
+			</div><!-- /#container -->
+			<span class="before">&nbsp;</span><span class="after">&nbsp;</span>
+			
+		</div><!-- /#main -->
+	</div><!-- /#wrapper -->
+<script type="text/javascript">
+		if (jQuery.browser.webkit) {
+			jQuery('select').addClass('webkit');
+		}
+</script>	
+</body>
+</html>
